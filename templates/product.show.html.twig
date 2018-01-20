@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %} {{ parent() }}{{ product.name }} {% endblock %}
+
+{% block body %}
+    <h3>{{ product.name }}</h3>
+    <ul>
+        <li>{{ product.description }}</li>
+        <li>{{ product.price|number_format(2, ',', '.') }}</li>
+    </ul>
+{% endblock %}
